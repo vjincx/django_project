@@ -1,0 +1,18 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+   <h1> Performer List</h1>
+
+   {% if performer_list %}
+   <ul>
+    {% for performer in performer_list %}
+    <li>
+        <a href="{{performer.get_absolute_url}}">{{ performer.first_name}} {{ performer.last_name}}</a> 
+    </li>
+    {% endfor %}
+   </ul>
+
+   {% else %}
+   <p> There are no performers.</p>
+   {% endif %}
+{% endblock %}

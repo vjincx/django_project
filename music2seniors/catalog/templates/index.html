@@ -1,0 +1,14 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+ <h1> Bring music to our senior homes</h1> 
+ <p> Welcome to senior homes music performances!</p>
+
+ <h2> We have following perfomers and senior homes:</h2>
+ <ul>
+    <li><strong>perfomers</strong> {{ num_performers}}</li>
+    <li><strong>senior homes</strong> {{ num_seniorhomes}}</li>
+ </ul>
+
+ <p> You have visited this page {{num_visits}} time{{ num_visits|pluralize }}</p>
+ {% endblock %}

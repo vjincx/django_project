@@ -1,0 +1,18 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+   <h1> Senior List</h1>
+
+   {% if senior_home_list %}
+   <ul>
+    {% for senior_home in senior_home_list %}
+    <li>
+        <a href="{{senior_home.get_absolute_url}}">{{ senior_home.name}}</a> 
+    </li>
+    {% endfor %}
+   </ul>
+
+   {% else %}
+   <p> There are no senior homes.</p>
+   {% endif %}
+{% endblock %}
